@@ -175,36 +175,37 @@
     <div>
       <h1 class="section-title">Contact <span>Yeovil Fencing</span></h1>
     </div>
-    <div class="contact-items">
-      <div class="contact-item">
-        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" alt="Phone Icon" /></div>
-        <div class="contact-info">
-          <h1>Phone</h1>
-          <h2><a href="tel:07817976703">07817 976703</a></h2>
-        </div>
+    <p class="contact-intro">Tell us about your fencing job and we'll get back to you with a free quote.</p>
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+      <input type="hidden" name="access_key" value="d060f449-12cd-4bb4-a2e0-117d3ae61e0d">
+      <input type="hidden" name="subject" value="New enquiry from yeovilfencing.com">
+      <input type="hidden" name="from_name" value="Yeovil Fencing website">
+      <input type="hidden" name="redirect" value="https://yeovilfencing.com/thank-you/">
+      <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off">
+      <div class="form-row">
+        <label for="f-name">Your name</label>
+        <input id="f-name" type="text" name="name" required autocomplete="name">
       </div>
-      <div class="contact-item">
-        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" alt="Email Icon" /></div>
-        <div class="contact-info">
-          <h1>Email</h1>
-          <h2><a href="mailto:web@yeovilfencing.com">web@yeovilfencing.com</a></h2>
-        </div>
+      <div class="form-row">
+        <label for="f-email">Email address</label>
+        <input id="f-email" type="email" name="email" required autocomplete="email">
       </div>
-      <div class="contact-item">
-        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" alt="Address Icon" /></div>
-        <div class="contact-info">
-          <h1>Address</h1>
-          <h2>49 Sparrow Road, Yeovil, Somerset, BA21 4BX</h2>
-        </div>
+      <div class="form-row">
+        <label for="f-phone">Phone number <span class="optional">(optional)</span></label>
+        <input id="f-phone" type="tel" name="phone" autocomplete="tel">
       </div>
-      <div class="contact-item">
-        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/whatsapp.png" alt="WhatsApp Icon" /></div>
-        <div class="contact-info">
-          <h1>WhatsApp</h1>
-          <h2><a href="https://wa.me/447817976703" target="_blank">Chat with us on WhatsApp</a></h2>
-        </div>
+      <div class="form-row">
+        <label for="f-postcode">Postcode or area <span class="optional">(optional)</span></label>
+        <input id="f-postcode" type="text" name="area" autocomplete="postal-code">
       </div>
-    </div>
+      <div class="form-row form-row-wide">
+        <label for="f-message">What fencing do you need?</label>
+        <textarea id="f-message" name="message" rows="6" required></textarea>
+      </div>
+      <p class="form-note form-row-wide">We only use your details to reply to your enquiry. See our <a href="/privacy/">privacy notice</a>.</p>
+      <button type="submit" class="cta form-row-wide">Send enquiry</button>
+    </form>
+    <p class="contact-email">Or email us at <a href="mailto:hello@yeovilfencing.com">hello@yeovilfencing.com</a></p>
   </div>
 </section>
 <!-- End Contact Section -->
@@ -212,7 +213,7 @@
   <!-- Footer -->
   <section id="footer">
     <div class="footer container">
-      <p>Copyright © 2025 RT Web Design. All rights reserved</p>
+      <p>Copyright © 2025 RT Web Design. All rights reserved · <a href="/privacy/">Privacy notice</a></p>
     </div>
   </section>
   <!-- End Footer -->

@@ -10,7 +10,6 @@ The site is plain static HTML and CSS, made before this repo was reorganised. Th
   - `404.html`: the not-found page (noindex). Without it, Cloudflare Pages would serve the home page for every unknown URL.
   - `sitemap.xml` and `robots.txt`: written by `python -I "D:\storage\Claude\Move Domains\tools\make_sitemap.py" site https://yeovilfencing.com`. Re-run it after adding a page.
 - `.claude/launch.json`: "site" preview. Or run `python -m http.server 8081 --directory site`.
-- **Temporary:** the old root copies (`index.html`, `style.css`, `img/`, `privacy/`, `thank-you/`) and `CNAME` are still in the repo root, because GitHub Pages is still switched on as a fallback (see Hosting). Edit `site/`, not the root copies. Remove the root copies and `CNAME` when GitHub Pages is turned off.
 
 ## Working style
 - Plain English, short sentences, UK spelling.
@@ -28,8 +27,9 @@ The site is plain static HTML and CSS, made before this repo was reorganised. Th
   - apex A records 185.199.108.153, .109, .110, .111
   - `www` CNAME `nomhawk.github.io`
   - all DNS only
-  - To undo, put those back as DNS only (in place of the two Pages CNAMEs), and serve from the repo root with the `CNAME` file.
-- **GitHub Pages is still switched on** (26 Nov 2026), serving the old root copies. The old Fasthosts zone (ns1-3.livedns.co.uk) still answers with the GitHub Pages addresses, and some resolvers can keep asking Fasthosts for up to 48 hours after the nameserver move. Turning GitHub Pages off before then would give those visitors a GitHub 404. To finish: either point the Fasthosts zone's apex and `www` at Pages (as was done for yeovilhandyman.com), or wait until 28 Nov 2026; then `git rm` the root copies and `CNAME`, and in repo Settings > Pages unpublish the site and set Branch to None.
+  - To undo, put those back as DNS only (in place of the two Pages CNAMEs), restore the `CNAME` file and the root layout, and turn GitHub Pages back on.
+- GitHub Pages was turned off on 26 Nov 2026, and the old root copies and `CNAME` were removed.
+- The old Fasthosts zone (not live, kept as a fallback) was also changed on 26 Nov 2026. Its apex A records now point to 104.21.63.137 and 172.67.145.194 (the other two removed), and its `www` CNAME to `yeovilfencing.pages.dev`. This is because some resolvers kept asking Fasthosts for up to 48 hours after the nameserver move. Its email records are unchanged (still livemail).
 
 ## Analytics
 - Cloudflare Web Analytics, automatic setup. There's no script in the code and no cookies. The beacon is added by Cloudflare at the edge.

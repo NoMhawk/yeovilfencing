@@ -146,6 +146,9 @@ p {
 	color: crimson;
 }
 #header .hamburger {
+	background: none;
+	padding: 0;
+	font: inherit;
 	height: 60px;
 	width: 60px;
 	display: inline-block;

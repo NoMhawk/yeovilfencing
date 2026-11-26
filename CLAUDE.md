@@ -56,10 +56,13 @@ All of these are DNS only. Don't change them when working on the website.
 - The home page has a canonical link (`https://yeovilfencing.com/`), as do the privacy and thank-you pages.
 
 - `site/app.js` (same as yeovilhandyman.com) runs the mobile menu (open, close on link tap or Escape) and darkens the header after scrolling. On pages without the hero (privacy, thank-you) the header is always solid.
-- No social-media (Open Graph) tags: the old placeholders pointing at yourwebsite.com were removed on 26 Nov 2026.
+- Search results and link previews (26 Nov 2026, Rich chose a branded card; the old yourwebsite.com placeholders were removed the same day):
+  - `site/favicon.svg` is a simple "YF" in white on dark grey, matching Yeovil Handyman's "YH". Rich to update: swap in a real logo when there is one, then remake the icons.
+  - `favicon.ico`, `apple-touch-icon.png`, `icon-192/512.png`, `logo-512.png` and `og-image.png` (dark card: YF, "Yeovil Fencing", "Garden and security fencing in Yeovil") are made by `python "D:\storage\Claude\Move Domains\tools\make_icons.py" --svg site/favicon.svg --out site --bg "#1f262e" --accent "#b8bec6" --card-title "Yeovil Fencing" --card-sub "Garden and security fencing in Yeovil"`.
+  - The tags in each page's `<!-- search-appearance -->` block (icons, manifest, og:/twitter:, and WebSite + business schema on the home page) are written by `search_tags.py` in the same folder. Rerun it after adding a page or changing a title or description (in Git Bash, prefix `MSYS_NO_PATHCONV=1`).
+  - Check it live: `node "D:\storage\Claude\Check Sites\scripts\search-appearance.mjs" yeovilfencing.com`.
 
 ## Known issues (not fixed yet)
 - `style.css` uses `img/hero-bg.png` as the hero background, which doesn't exist (404).
 - The four service icons load from img.icons8.com (a third-party load).
-- No favicon.
 - The project pictures in `site/img/`: check whether they are real job photos, stock or AI-made before claiming they show the business's work.

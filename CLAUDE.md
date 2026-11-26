@@ -55,11 +55,11 @@ All of these are DNS only. Don't change them when working on the website.
 - No home address, phone number or WhatsApp on the site, at Rich's request (26 Nov 2026). Contact is the form plus hello@yeovilfencing.com.
 - The home page has a canonical link (`https://yeovilfencing.com/`), as do the privacy and thank-you pages.
 
+- `site/app.js` (same as yeovilhandyman.com) runs the mobile menu (open, close on link tap or Escape) and darkens the header after scrolling. On pages without the hero (privacy, thank-you) the header is always solid.
+- No social-media (Open Graph) tags: the old placeholders pointing at yourwebsite.com were removed on 26 Nov 2026.
+
 ## Known issues (not fixed yet)
-- `index.html` loads `./app.js`, which doesn't exist (404). The mobile menu (hamburger) doesn't work without it.
 - `style.css` uses `img/hero-bg.png` as the hero background, which doesn't exist (404).
-- Placeholder Open Graph tags in `index.html` (`og:image` and `og:url` point at `yourwebsite.com`).
 - The four service icons load from img.icons8.com (a third-party load).
 - No favicon.
-- The privacy and thank-you pages reuse the home page header without a dark hero, so the header may need a solid background there.
 - The project pictures in `site/img/`: check whether they are real job photos, stock or AI-made before claiming they show the business's work.

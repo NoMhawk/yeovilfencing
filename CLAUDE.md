@@ -62,7 +62,8 @@ All of these are DNS only. Don't change them when working on the website.
   - The tags in each page's `<!-- search-appearance -->` block (icons, manifest, og:/twitter:, and WebSite + business schema on the home page) are written by `search_tags.py` in the same folder. Rerun it after adding a page or changing a title or description (in Git Bash, prefix `MSYS_NO_PATHCONV=1`).
   - Check it live: `node "D:\storage\Claude\Check Sites\scripts\search-appearance.mjs" yeovilfencing.com`.
 
+- The hero background is `img/gravel.jpg` under a dark overlay (27 Nov 2026). The template's `hero-bg.png` and `img-1.png` (service cards) never existed; the service cards use the plain dark gradient, as on yeovilhandyman.com.
+
 ## Known issues (not fixed yet)
-- `style.css` uses `img/hero-bg.png` as the hero background, which doesn't exist (404).
 - The four service icons load from img.icons8.com (a third-party load).
 - The project pictures in `site/img/`: check whether they are real job photos, stock or AI-made before claiming they show the business's work.
